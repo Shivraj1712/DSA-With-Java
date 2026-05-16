@@ -2,7 +2,7 @@
 
 # This is the repository for the codes for DSA with Java
 
--- variables
--- calculator
--- Loops
--- solutions
+- variables
+- calculator
+- Loops
+- solutions
