@@ -1,9 +1,7 @@
-package solutions;
-
 import java.util.*;
 
 public class Solutions {
-    public int sqrt(int x) {
+    public static int sqrt(int x) {
         int i;
         for (i = 0; i * i <= x; i++) {
             if (i * i == x)
@@ -12,13 +10,34 @@ public class Solutions {
         return i - 1;
     }
 
-    public int factorial(int n) {
+    public static int factorial(int n) {
         if (n <= 1)
             return 1;
+        int k = 2;
         long fact = 1;
-        for (int i = 2; i <= n; i++) {
-            fact *= i;
+        while (k * k <= n) {
+            fact *= k;
+            k++;
         }
         return (int) fact;
+    }
+
+    public static boolean CheckPrime(int a) {
+        int k = 2;
+        while (k < a) {
+            if (a % k == 0)
+                return false;
+            k++;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int a = sc.nextInt();
+        // System.out.println(factorial(a));
+        System.out.println(CheckPrime(a));
+        sc.close();
     }
 }
