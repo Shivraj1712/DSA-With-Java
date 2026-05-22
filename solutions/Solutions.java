@@ -32,12 +32,115 @@ public class Solutions {
         return true;
     }
 
+    public static int reverseInteger(int a) {
+        long rev = 0;
+        while (a != 0) {
+            rev = rev * 10 + a % 10;
+            a /= 10;
+        }
+        return (int) rev;
+    }
+
+    public static boolean palindrome(int n) {
+        long rev = 0;
+        int x = n;
+        while (n != 0) {
+            rev = rev * 10 + n % 10;
+            n /= 10;
+        }
+        if (rev == x)
+            return true;
+        else
+            return false;
+    }
+
+    public static int gcd(int a, int b) {
+        if (a % b == 0)
+            return b;
+        else
+            return gcd(b, a % b);
+    }
+
+    public static int sumOfDigits(int n) {
+        long sum = 0;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 20;
+        }
+        return (int) sum;
+    }
+
+    // first to nth term of the Fibonacci Series
+    public static void FibonacciSeries(int n) {
+        int num1 = 0, num2 = 1;
+        System.out.print(num1 + "  " + num2 + "  ");
+        while (n - 2 != 0) {
+            int next = num1 + num2;
+            System.out.print(next + "  ");
+            num1 = num2;
+            num2 = next;
+            n--;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int a = sc.nextInt();
+        // System.out.print("Enter a number: ");
+        // int a = sc.nextInt();
         // System.out.println(factorial(a));
-        System.out.println(CheckPrime(a));
+        // // System.out.println(palindrome(a));
+        // System.out.println(gcd(5, 2));
+        // int a = sc.nextInt();
+        // int b = sc.nextInt();
+        // // printSquares(a, b);
+        // FibonacciSeries(10);
+
+        // for (float i = -3; i <= 3; i += 0.1) {
+        // for (float j = -4; j <= 4; j += 0.1) {
+        // if (i * i + j * j == 25)
+        // System.out.print("*");
+        // else
+        // System.out.print(" ");
+        // }
+        // System.out.println("");
+        // }
+
+        // for (int i = 0; i < 5; ++i) {
+        // for (int j = 0; j < i; ++j) {
+        // System.out.print("*");
+        // }
+        // System.out.println("");
+        // }
+        // for (int i = 5; i > 0; --i) {
+        // for (int j = i; j > 0; --j) {
+        // System.out.print("*");
+        // }
+        // System.out.println("");
+        // }
+
+        // for (int i = 0; i < 5; ++i) {
+        // for (int j = 0; j < i; ++j) {
+        // System.out.print(j + 1);
+        // }
+        // System.out.println("");
+        // }
+        // for (int i = 5; i > 0; --i) {
+        // for (int j = 1; j <= i; ++j) {
+        // System.out.print(j);
+        // }
+        // System.out.println("");
+        // }
+
+        for (int i = 0; i < 5; ++i) {
+            for (int j = 0; j < i; ++j) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 5 - i; ++j) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+
         sc.close();
     }
 }
