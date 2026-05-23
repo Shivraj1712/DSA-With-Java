@@ -131,16 +131,36 @@ public class Solutions {
         // System.out.println("");
         // }
 
-        for (int i = 0; i < 5; ++i) {
-            for (int j = 0; j < i; ++j) {
-                System.out.print(" ");
+        // for (int i = 0; i < 5; ++i) {
+        // for (int j = 0; j < i; ++j) {
+        // System.out.print(" ");
+        // }
+        // for (int j = 0; j < 5 - i; ++j) {
+        // System.out.print("* ");
+        // }
+        // System.out.println("");
+        // // }
+        // int stars = 1;
+        // for (int i = 1; i <= 6; ++i) {
+        // for (int j = 1; j <= stars; ++j) {
+        // System.out.print("* ");
+        // }
+        // System.out.println();
+        // if (stars % 2 == 0)
+        // stars += 2;
+        // }
+        int n = 7;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (i == j)
+                    System.out.print("*");
+                else if (i == n - j - 1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
             }
-            for (int j = 0; j < 5 - i; ++j) {
-                System.out.print("* ");
-            }
-            System.out.println("");
+            System.out.println();
         }
-
         sc.close();
     }
 }
