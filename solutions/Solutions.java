@@ -22,7 +22,7 @@ public class Solutions {
         return (int) fact;
     }
 
-    public static boolean CheckPrime(int a) {
+    public static boolean checkPrime(int a) {
         int k = 2;
         while (k < a) {
             if (a % k == 0)

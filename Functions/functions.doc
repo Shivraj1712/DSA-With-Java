@@ -1,0 +1,25 @@
+1.What are functions ?
+Ans : A function is a block of reusable code that performs a specific task.
+
+2.What are the use of functions ?
+Ans : Uses of Functions :
+    1.Code Reusability 
+    2.Easy Debugging 
+    3.Modular Programming
+    4.Better Readability
+
+3. What are the components of functions
+Ans : Components of Functions :
+    1.Modifier : defines access leve
+    2.Return Type : defines type of data the function returns
+    3.Function Name : name of the function that follows camelCase convention
+    4.Parameters : optional inputs passed into the functions
+    5.Function Body : content or statements inside the function that is to be executed
+
+4. What is Context of a function ?
+5. What is execution flow of function ?
+6. What are stack and heap functions ?
+7. What are Types of Functions - Parameterised Function, Recursive Function ;
+8. What is the difference between the parameters and arguments ? 
+9. What are function overloading and overriding ? 
+10.What is call stack and heap memory ?
