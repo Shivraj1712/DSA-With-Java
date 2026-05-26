@@ -70,7 +70,6 @@ public class Solutions {
         return (int) sum;
     }
 
-    // first to nth term of the Fibonacci Series
     public static void FibonacciSeries(int n) {
         int num1 = 0, num2 = 1;
         System.out.print(num1 + "  " + num2 + "  ");
