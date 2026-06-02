@@ -59,9 +59,8 @@ public class Functions {
                 System.out.println("You gussed correct numberr");
                 break;
             }
-
         }
-
+        sc.close();
     }
 
     public static int countFreq(int n, int digit) {
@@ -132,6 +131,42 @@ public class Functions {
             x /= 10;
             ans += digit * Math.pow(2, power);
             ++power;
+        }
+        return ans;
+    }
+
+    public static int[] subtractNumber(int[] arr1, int[] arr2) {
+        int maxIn = (arr1.length > arr2.length) ? arr1.length : arr2.length;
+        int[] res = new int[maxIn];
+        int i = arr1.length - 1, j = arr2.length - 1, k = maxIn - 1;
+        while (i >= 0 && j >= 0 && k >= 0) {
+            if (arr1[i] > arr2[j]) {
+                res[k] = arr1[i] - arr2[j];
+                --i;
+                --j;
+                --k;
+            } else {
+                res[k] = arr1[i] - arr2[j] + 10;
+                while (arr1[i] == 0) {
+                    --i;
+                }
+                --arr1[i];
+                --j;
+                --k;
+            }
+        }
+        int noZeroValues = 0;
+        for (int n = 0; n < res.length; ++n) {
+            if (res[n] != 0)
+                ++noZeroValues;
+        }
+        int[] ans = new int[noZeroValues];
+        int m = 0;
+        for (int n = 0; n < res.length; ++n) {
+            if (res[n] != 0) {
+                ans[m] = res[n];
+                ++m;
+            }
         }
         return ans;
     }
